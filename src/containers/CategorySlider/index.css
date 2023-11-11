@@ -1,0 +1,24 @@
+.swiper__arrow {
+    background-color: #F2F3F4;
+    margin: 0 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s ease-in;
+}
+
+.swiper__arrow > i {
+    font-size: 24px;
+}
+
+.swiper__arrow:hover {
+    background-color: #3BB77E;
+    cursor: pointer;
+}
+
+.swiper__arrow:hover i {
+    color: white;
+}
