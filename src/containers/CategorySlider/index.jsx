@@ -1,13 +1,34 @@
-import React, { useCallback, useRef } from 'react'
+import React, { useCallback, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import {Navigation} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import 'swiper/css';
 import categoryData from '../../data/category.data';
+import 'swiper/css';
 import 'swiper/css/navigation';
 import './index.css';
 
-import {Navigation} from 'swiper/modules';
-import { Link } from 'react-router-dom';
+const settings = {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+      spaceBetween: 15,
+    },
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 15,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 8,
+      spaceBetween: 20,
+    }
+  }   
+};
 
 const CategorySlider = () => {
   const sliderRef = useRef(null)
@@ -55,6 +76,7 @@ const CategorySlider = () => {
           loop={true}
           modules={[Navigation]}
           className='mySwiper'
+          {...settings}
         >
           {categoryData.map((item, index) => (
             <SwiperSlide>
