@@ -31,7 +31,7 @@ const ProductCard = ({item, index, openQuickView}) => {
                     <div className="product-action-1">
                       <a aria-label="Add To Wishlist" className="action-btn" href="shop-wishlist.html"><i className="fi-rs-heart" /></a>
                       <a aria-label="Compare" className="action-btn" href="shop-compare.html"><i className="fi-rs-shuffle" /></a>
-                      <button onClick={openQuickView} aria-label="Quick view" className="action-btn"><i className="fi-rs-eye" /></button>
+                      <a onClick={openQuickView} aria-label="Quick view" className="action-btn"><i className="fi-rs-eye" /></a>
                     </div>
                     
                     {index % 6 !== 0 && (

@@ -3,78 +3,6 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="main">
-    <section className="featured section-padding">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-1-5 col-md-4 col-12 col-sm-6 mb-md-4 mb-xl-0">
-            <div className="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay={0}>
-              <div className="banner-icon">
-                <img src="assets/imgs/theme/icons/icon-1.svg" alt="" />
-              </div>
-              <div className="banner-text">
-                <h3 className="icon-box-title">Best prices &amp; offers</h3>
-                <p>Orders $50 or more</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-1-5 col-md-4 col-12 col-sm-6">
-            <div className="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
-              <div className="banner-icon">
-                <img src="assets/imgs/theme/icons/icon-2.svg" alt="" />
-              </div>
-              <div className="banner-text">
-                <h3 className="icon-box-title">Free delivery</h3>
-                <p>24/7 amazing services</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-1-5 col-md-4 col-12 col-sm-6">
-            <div className="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
-              <div className="banner-icon">
-                <img src="assets/imgs/theme/icons/icon-3.svg" alt="" />
-              </div>
-              <div className="banner-text">
-                <h3 className="icon-box-title">Great daily deal</h3>
-                <p>When you sign up</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-1-5 col-md-4 col-12 col-sm-6">
-            <div className="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
-              <div className="banner-icon">
-                <img src="assets/imgs/theme/icons/icon-4.svg" alt="" />
-              </div>
-              <div className="banner-text">
-                <h3 className="icon-box-title">Wide assortment</h3>
-                <p>Mega Discounts</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-1-5 col-md-4 col-12 col-sm-6">
-            <div className="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
-              <div className="banner-icon">
-                <img src="assets/imgs/theme/icons/icon-5.svg" alt="" />
-              </div>
-              <div className="banner-text">
-                <h3 className="icon-box-title">Easy returns</h3>
-                <p>Within 30 days</p>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-1-5 col-md-4 col-12 col-sm-6 d-xl-none">
-            <div className="banner-left-icon d-flex align-items-center wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
-              <div className="banner-icon">
-                <img src="assets/imgs/theme/icons/icon-6.svg" alt="" />
-              </div>
-              <div className="banner-text">
-                <h3 className="icon-box-title">Safe delivery</h3>
-                <p>Within 30 days</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <section className="section-padding footer-mid">
       <div className="container pt-15 pb-20">
         <div className="row">
@@ -84,12 +12,6 @@ const Footer = () => {
                 <a href="index.html" className="mb-15"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
                 <p className="font-lg text-heading">Awesome grocery store website template</p>
               </div>
-              <ul className="contact-infor">
-                <li><img src="assets/imgs/theme/icons/icon-location.svg" alt="" /><strong>Address: </strong> <span>5171 W Campbell Ave undefined Kent, Utah 53127 United States</span></li>
-                <li><img src="assets/imgs/theme/icons/icon-contact.svg" alt="" /><strong>Call Us:</strong><span>(+91) - 540-025-124553</span></li>
-                <li><img src="assets/imgs/theme/icons/icon-email-2.svg" alt="" /><strong>Email:</strong><span><a href="../../../cdn-cgi/l/email-protection.html" className="__cf_email__" data-cfemail="a4d7c5c8c1e4eac1d7d08ac7cbc9">[email&nbsp;protected]</a></span></li>
-                <li><img src="assets/imgs/theme/icons/icon-clock.svg" alt="" /><strong>Hours:</strong><span>10:00 - 18:00, Mon - Sat</span></li>
-              </ul>
             </div>
           </div>
           <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
@@ -98,10 +20,6 @@ const Footer = () => {
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Delivery Information</a></li>
                 <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Contact Us</a></li>
-                <li><a href="#">Support Center</a></li>
-                <li><a href="#">Careers</a></li>
               </ul>
           </div>
           <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
@@ -110,10 +28,6 @@ const Footer = () => {
               <li><a href="#">Sign In</a></li>
               <li><a href="#">View Cart</a></li>
               <li><a href="#">My Wishlist</a></li>
-              <li><a href="#">Track My Order</a></li>
-              <li><a href="#">Help Ticket</a></li>
-              <li><a href="#">Shipping Details</a></li>
-              <li><a href="#">Compare products</a></li>
             </ul>
           </div>
           <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
@@ -122,10 +36,6 @@ const Footer = () => {
               <li><a href="#">Become a Vendor</a></li>
               <li><a href="#">Affiliate Program</a></li>
               <li><a href="#">Farm Business</a></li>
-              <li><a href="#">Farm Careers</a></li>
-              <li><a href="#">Our Suppliers</a></li>
-              <li><a href="#">Accessibility</a></li>
-              <li><a href="#">Promotions</a></li>
             </ul>
           </div>
           <div className="footer-link-widget col wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
@@ -134,21 +44,7 @@ const Footer = () => {
               <li><a href="#">Milk &amp; Flavoured Milk</a></li>
               <li><a href="#">Butter and Margarine</a></li>
               <li><a href="#">Eggs Substitutes</a></li>
-              <li><a href="#">Marmalades</a></li>
-              <li><a href="#">Sour Cream and Dips</a></li>
-              <li><a href="#">Tea &amp; Kombucha</a></li>
-              <li><a href="#">Cheese</a></li>
             </ul>
-          </div>
-          <div className="footer-link-widget widget-install-app col wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
-            <h4 className="widget-title">Install App</h4>
-            <p className>From App Store or Google Play</p>
-            <div className="download-app">
-              <a href="#" className="hover-up mb-sm-2 mb-lg-0"><img className="active" src="assets/imgs/theme/app-store.jpg" alt="" /></a>
-              <a href="#" className="hover-up mb-sm-2"><img src="assets/imgs/theme/google-play.jpg" alt="" /></a>
-            </div>
-            <p className="mb-20">Secured Payment Gateways</p>
-            <img className src="assets/imgs/theme/payment-method.png" alt="" />
           </div>
         </div>
       </div></section>

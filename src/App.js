@@ -7,7 +7,7 @@ import ContactPage from './pages/ContactPage';
 import FilterPage from './pages/FilterPage';
 import HomePage from './pages/HomePage';
 import NotFoundPage from './pages/NotFoundPage';
-import ProductDetailsPage from './pages/ProductDetailsPage';
+
 import ForgotPasswordPage from './pages/auth/ForgotPasswordPage';
 import ResetPasswordPage from './pages/auth/ResetPasswordPage';
 import SigninPage from './pages/auth/SigninPage';
@@ -20,6 +20,7 @@ import WishlistPage from './pages/user/WishlistPage';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
+import ProductDetailsPage from './pages/ProductDetailsPage';
 
 function App() {
   return (
@@ -36,9 +37,11 @@ function App() {
                 
         <Route path='/filter'>
             <Route index element={<FilterPage />}  />
-            <Route path=':id' element={<ProductDetailsPage />} />
+            {/* <Route path=':id' element={<ProductDetailsPage />} /> */}
         </Route>
-
+        
+        <Route path='/products/:id' element={<ProductDetailsPage />} />
+        
         <Route path='/account' element={<AccountPage />} />
         <Route path='/wishlist' element={<WishlistPage />} />
         <Route path='/guides' element={<GuidesPage />} />
