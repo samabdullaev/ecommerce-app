@@ -52,7 +52,9 @@ const PopularProducts = () => {
                 productsData
                 .filter((item) => activeTab==="all" ? true : item.category===activeTab)
                 .map((item, index) => (
+                  <div key={index} className="col-lg-1-5 col-md-4 col-12 col-sm-6">
                   <ProductCard item={item} index={index} openQuickView = {() => quickViewRef.current.open(item)} />
+                  </div>
                 ))
               }
             </div>

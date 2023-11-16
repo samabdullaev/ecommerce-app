@@ -4,7 +4,6 @@ import ProductTag from './ProductTag'
 
 const ProductCard = ({item, index, openQuickView, type="grid"}) => {
   return type==="grid" ? (
-    <div className="col-lg-1-5 col-md-4 col-12 col-sm-6">
                 <div 
                     className="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" 
                     data-wow-delay={`.${index}s`}
@@ -65,7 +64,6 @@ const ProductCard = ({item, index, openQuickView, type="grid"}) => {
                     </div>
                   </div>
                 </div>
-              </div>
   ) :
   (
     <div className="product-cart-wrap" data-wow-delay={`.${index}s`}>
