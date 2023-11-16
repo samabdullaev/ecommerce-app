@@ -41,7 +41,7 @@ function App() {
         {/* </Route> */}
         
         <Route path='/products/:id' element={<ProductDetailsPage />} />
-        <Route path='/filter/:id?' element={<FilterPage />} />
+        <Route path='/filter/:category_id?' element={<FilterPage />} />
         
         <Route path='/account' element={<AccountPage />} />
         <Route path='/wishlist' element={<WishlistPage />} />
