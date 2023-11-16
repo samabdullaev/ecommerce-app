@@ -35,12 +35,13 @@ function App() {
         <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/compare' element={<ComparePage />} />
                 
-        <Route path='/filter'>
-            <Route index element={<FilterPage />}  />
+        {/* <Route path='/filter'> */}
+            {/* <Route index element={<FilterPage />}  /> */}
             {/* <Route path=':id' element={<ProductDetailsPage />} /> */}
-        </Route>
+        {/* </Route> */}
         
         <Route path='/products/:id' element={<ProductDetailsPage />} />
+        <Route path='/filter/:id?' element={<FilterPage />} />
         
         <Route path='/account' element={<AccountPage />} />
         <Route path='/wishlist' element={<WishlistPage />} />

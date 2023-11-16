@@ -1,0 +1,13 @@
+.card__type {
+    transition: .3s ease-in;
+    font-size: 18px !important;
+}
+
+.card__type:hover {
+    color: #FDC040 !important;
+}
+
+.card__type--active{
+    color: #3BB77E !important;
+    font-size: 20px !important;
+}

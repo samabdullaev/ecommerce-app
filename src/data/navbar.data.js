@@ -8,6 +8,10 @@ export default [
         title: 'About'
     },
     {
+        path: '/filter',
+        title: 'Products'
+    },
+    {
         path: '/contact',
         title: 'Contact'
     }
