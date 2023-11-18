@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import CategoryFilter from '../components/filter/CategoryFilter'
-import AttributeFilter from '../components/filter/AttributeFilter'
-import SortByFilter from '../components/filter/SortByFilter'
-import BreadcrumbFilter from '../components/filter/BreadcrumbFilter'
-import productsData from '../data/products.data'
-import ProductCard from '../components/ProductCard'
+import CategoryFilter from '../../components/filter/CategoryFilter'
+import AttributeFilter from '../../components/filter/AttributeFilter'
+import SortByFilter from '../../components/filter/SortByFilter'
+import BreadcrumbFilter from '../../components/filter/BreadcrumbFilter'
+import productsData from '../../data/products.data'
+import ProductCard from '../../components/ProductCard'
 
 const FilterPage = () => {
   const [type, setType] = useState('grid');

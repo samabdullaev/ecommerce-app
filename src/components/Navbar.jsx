@@ -12,135 +12,38 @@ const Navbar = () => {
       <div className="mobile-promotion">
         <span>Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left</span>
       </div>
-      <div className="header-top header-top-ptb-1 d-none d-lg-block">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-xl-3 col-lg-4">
-              <div className="header-info">
-                <ul>
-                  <li><a href="https://wp.alithemes.com/html/nest/demo/page-about.htlm">About Us</a></li>
-                  <li><a href="page-account.html">My Account</a></li>
-                  <li><a href="shop-wishlist.html">Wishlist</a></li>
-                  <li><a href="https://wp.alithemes.com/html/nest/demo/shop-order.html">Order Tracking</a></li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-xl-6 col-lg-4">
-              <div className="text-center">
-                <div id="news-flash" className="d-inline-block">
-                  <ul>
-                    <li>100% Secure delivery without contacting the courier</li>
-                    <li>Supper Value Deals - Save more with coupons</li>
-                    <li>Trendy 25silver jewelry, save up 35% off today</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-3 col-lg-4">
-              <div className="header-info header-info-right">
-                <ul>
-                  <li>Need help? Call Us: <strong className="text-brand"> + 1800 900</strong></li>
-                  <li>
-                    <a className="language-dropdown-active" href="#">English <i className="fi-rs-angle-small-down" /></a>
-                    <ul className="language-dropdown">
-                      <li>
-                        <a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="" />Français</a>
-                      </li>
-                      <li>
-                        <a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />Deutsch</a>
-                      </li>
-                      <li>
-                        <a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />Pусский</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a className="language-dropdown-active" href="#">USD <i className="fi-rs-angle-small-down" /></a>
-                    <ul className="language-dropdown">
-                      <li>
-                        <a href="#"><img src="assets/imgs/theme/flag-fr.png" alt="" />INR</a>
-                      </li>
-                      <li>
-                        <a href="#"><img src="assets/imgs/theme/flag-dt.png" alt="" />MBP</a>
-                      </li>
-                      <li>
-                        <a href="#"><img src="assets/imgs/theme/flag-ru.png" alt="" />EU</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div className="header-middle header-middle-ptb-1 d-none d-lg-block">
         <div className="container">
           <div className="header-wrap">
             <div className="logo logo-width-1">
-              <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+              <Link to="/"><img src="assets/imgs/theme/logo.svg" alt="logo" /></Link>
             </div>
             <div className="header-right">
               <div className="search-style-2">
-                <form action="#">
-                  <select className="select-active">
-                    <option>All Categories</option>
-                    <option>Milks and Dairies</option>
-                    <option>Wines &amp; Alcohol</option>
-                    <option>Clothing &amp; Beauty</option>
-                    <option>Pet Foods &amp; Toy</option>
-                    <option>Fast food</option>
-                    <option>Baking material</option>
-                    <option>Vegetables</option>
-                    <option>Fresh Seafood</option>
-                    <option>Noodles &amp; Rice</option>
-                    <option>Ice cream</option>
-                  </select>
                   <input type="text" placeholder="Search for items..." />
-                </form>
               </div>
               <div className="header-action-right">
                 <div className="header-action-2">
-                  <div className="search-location">
-                    <form action="#">
-                      <select className="select-active">
-                        <option>Your Location</option>
-                        <option>Alabama</option>
-                        <option>Alaska</option>
-                        <option>Arizona</option>
-                        <option>Delaware</option>
-                        <option>Florida</option>
-                        <option>Georgia</option>
-                        <option>Hawaii</option>
-                        <option>Indiana</option>
-                        <option>Maryland</option>
-                        <option>Nevada</option>
-                        <option>New Jersey</option>
-                        <option>New Mexico</option>
-                        <option>New York</option>
-                      </select>
-                    </form>
-                  </div>
                   <div className="header-action-icon-2">
-                    <a href="shop-compare.html">
+                    <Link to="/compare">
                       <img className="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-compare.svg" />
                       <span className="pro-count blue">3</span>
-                    </a>
-                    <a href="shop-compare.html"><span className="lable ml-0">Compare</span></a>
+                    </Link>
+                    <Link to="/compare"><span className="lable ml-0">Compare</span></Link>
                   </div>
                   <div className="header-action-icon-2">
-                    <a href="shop-wishlist.html">
+                    <Link to="/wishlist">
                       <img className="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg" />
                       <span className="pro-count blue">6</span>
-                    </a>
-                    <a href="shop-wishlist.html"><span className="lable">Wishlist</span></a>
+                    </Link>
+                    <Link to="/wishlist"><span className="lable">Wishlist</span></Link>
                   </div>
                   <div className="header-action-icon-2">
-                    <a className="mini-cart-icon" href="shop-cart.html">
+                    <Link to="/cart" className="mini-cart-icon">
                       <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
                       <span className="pro-count blue">2</span>
-                    </a>
-                    <a href="shop-cart.html"><span className="lable">Cart</span></a>
+                    </Link>
+                    <Link to="/cart"><span className="lable">Cart</span></Link>
                     <div className="cart-dropdown-wrap cart-dropdown-hm2">
                       <ul>
                         <li>
@@ -173,36 +76,36 @@ const Navbar = () => {
                           <h4>Total <span>$4000.00</span></h4>
                         </div>
                         <div className="shopping-cart-button">
-                          <a href="shop-cart.html" className="outline">View cart</a>
-                          <a href="shop-checkout.html">Checkout</a>
+                          <Link to="/cart" className="outline">View cart</Link>
+                          <Link to="/checkout">Checkout</Link>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="header-action-icon-2">
-                    <a href="page-account.html">
+                    <Link to="/account">
                       <img className="svgInject" alt="Nest" src="assets/imgs/theme/icons/icon-user.svg" />
-                    </a>
-                    <a href="page-account.html"><span className="lable ml-0">Account</span></a>
+                    </Link>
+                    <Link to="/account"><span className="lable ml-0">Account</span></Link>
                     <div className="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                       <ul>
                         <li>
-                          <a href="page-account.html"><i className="fi fi-rs-user mr-10" />My Account</a>
+                          <Link to="/account"><i className="fi fi-rs-user mr-10" />My Account</Link>
                         </li>
                         <li>
-                          <a href="page-account.html"><i className="fi fi-rs-location-alt mr-10" />Order Tracking</a>
+                          <Link to="/account"><i className="fi fi-rs-location-alt mr-10" />Order Tracking</Link>
                         </li>
                         <li>
-                          <a href="page-account.html"><i className="fi fi-rs-label mr-10" />My Voucher</a>
+                          <Link to="/account"><i className="fi fi-rs-label mr-10" />My Voucher</Link>
                         </li>
                         <li>
-                          <a href="shop-wishlist.html"><i className="fi fi-rs-heart mr-10" />My Wishlist</a>
+                          <Link to="/wishlist"><i className="fi fi-rs-heart mr-10" />My Wishlist</Link>
                         </li>
                         <li>
-                          <a href="page-account.html"><i className="fi fi-rs-settings-sliders mr-10" />Setting</a>
+                          <Link to="/account"><i className="fi fi-rs-settings-sliders mr-10" />Setting</Link>
                         </li>
                         <li>
-                          <a href="page-login.html"><i className="fi fi-rs-sign-out mr-10" />Sign out</a>
+                          <Link to="/auth/signin"><i className="fi fi-rs-sign-out mr-10" />Sign out</Link>
                         </li>
                       </ul>
                     </div>
@@ -217,7 +120,7 @@ const Navbar = () => {
         <div className="container">
           <div className="header-wrap header-space-between position-relative">
             <div className="logo logo-width-1 d-block d-lg-none">
-              <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+              <Link to="/"><img src="assets/imgs/theme/logo.svg" alt="logo" /></Link>
             </div>
             <div className="header-nav d-none d-lg-flex">
               <div className="main-categori-wrap d-none d-lg-block">
@@ -299,10 +202,10 @@ const Navbar = () => {
             <div className="header-action-right d-block d-lg-none">
               <div className="header-action-2">
                 <div className="header-action-icon-2">
-                  <a href="shop-wishlist.html">
+                  <Link to="/wishlist">
                     <img alt="Nest" src="assets/imgs/theme/icons/icon-heart.svg" />
                     <span className="pro-count white">4</span>
-                  </a>
+                  </Link>
                 </div>
                 <div className="header-action-icon-2">
                   <a className="mini-cart-icon" href="#">
@@ -341,8 +244,8 @@ const Navbar = () => {
                         <h4>Total <span>$383.00</span></h4>
                       </div>
                       <div className="shopping-cart-button">
-                        <a href="shop-cart.html">View cart</a>
-                        <a href="shop-checkout.html">Checkout</a>
+                        <Link to="/cart">View cart</Link>
+                        <Link to="/checkout">Checkout</Link>
                       </div>
                     </div>
                   </div>
@@ -357,7 +260,7 @@ const Navbar = () => {
       <div className="mobile-header-wrapper-inner">
         <div className="mobile-header-top">
           <div className="mobile-header-logo">
-            <a href="index.html"><img src="assets/imgs/theme/logo.svg" alt="logo" /></a>
+            <Link to="/"><img src="assets/imgs/theme/logo.svg" alt="logo" /></Link>
           </div>
           <div className="mobile-menu-close close-style-wrap close-style-position-inherit">
             <button
@@ -393,7 +296,7 @@ const Navbar = () => {
               <a href="page-contact.html"><i className="fi-rs-marker" /> Our location </a>
             </div>
             <div className="single-mobile-header-info">
-              <a href="page-login.html"><i className="fi-rs-user" />Log In / Sign Up </a>
+              <Link to="/auth/signin"><i className="fi-rs-user" />Log In / Sign Up </Link>
             </div>
             <div className="single-mobile-header-info">
               <a href="#"><i className="fi-rs-headphones" />(+01) - 2345 - 6789 </a>

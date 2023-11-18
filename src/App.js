@@ -16,10 +16,10 @@ import ForgotPasswordPage from './pages/auth/ForgotPasswordPage';
 import ResetPasswordPage from './pages/auth/ResetPasswordPage';
 import PrivacyPage from './pages/info/PrivacyPage';
 import GuidesPage from './pages/info/GuidesPage';
-
+import ComparePage from './pages/ComparePage';
 import CartPage from './pages/CartPage';
 import CheckoutPage from './pages/CheckoutPage';
-import ComparePage from './pages/ComparePage';
+
 import TermsPage from './pages/info/TermsPage';
 import Loader from './components/Loader';
 
@@ -34,6 +34,9 @@ function App() {
         <Route path='/contact' element={<ContactPage />} />
         <Route path='/account' element={<AccountPage />} />
         <Route path='/wishlist' element={<WishlistPage />} />
+        <Route path='/compare' element={<ComparePage />} />
+        <Route path='/cart' element={<CartPage />} />
+        <Route path='/checkout' element={<CheckoutPage />} />
         <Route path='/products/:id' element={<ProductDetailsPage />} />
         <Route path='/filter/:category_id?' element={<FilterPage />} />
 
@@ -45,17 +48,12 @@ function App() {
         </Route>
         <Route path='/privacy' element={<PrivacyPage />} />
         <Route path='/guides' element={<GuidesPage />} />
+        <Route path='/terms' element={<TermsPage />} />
         
-        <Route path='/cart' element={<CartPage />} />
-        <Route path='/checkout' element={<CheckoutPage />} />
-        <Route path='/compare' element={<ComparePage />} />
-                
         {/* <Route path='/filter'> */}
             {/* <Route index element={<FilterPage />}  /> */}
             {/* <Route path=':id' element={<ProductDetailsPage />} /> */}
         {/* </Route> */}
-        
-        <Route path='/terms' element={<TermsPage />} />
 
         <Route path='*' element={<NotFoundPage />} />
       </Routes>

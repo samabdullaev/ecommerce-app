@@ -1,10 +1,10 @@
 import React from 'react';
-import CategorySlider from '../containers/CategorySlider';
-import PopularProducts from '../containers/PopularProducts';
-import HomeSlider from '../containers/HomeSlider';
-import FeaturedBanners from '../containers/FeaturedBanners';
-import ProductSales from '../containers/ProductSales';
-import productsData from '../data/products.data';
+import CategorySlider from '../../containers/CategorySlider';
+import PopularProducts from '../../containers/PopularProducts';
+import HomeSlider from '../../containers/HomeSlider';
+import FeaturedBanners from '../../containers/FeaturedBanners';
+import ProductSales from '../../containers/ProductSales';
+import productsData from '../../data/products.data';
 
 const HomePage = () => {
   return (

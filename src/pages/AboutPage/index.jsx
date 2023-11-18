@@ -1,5 +1,5 @@
 import React from 'react';
-import AboutSlider from '../components/AboutSlider';
+import AboutSlider from '../../components/AboutSlider';
 import { CountUp } from 'use-count-up';
 
 const AboutPage = () => {
