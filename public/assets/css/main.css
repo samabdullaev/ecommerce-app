@@ -5057,22 +5057,22 @@ table .product-thumbnail img {
   border-radius: 5px;
 }
 
-.detail-qty > a {
+.detail-qty > span {
   font-size: 16px;
   position: absolute;
   right: 8px;
   color: #3BB77E;
 }
 
-.detail-qty > a:hover {
+.detail-qty > span:hover {
   color: #29A56C;
 }
 
-.detail-qty > a.qty-up {
+.detail-qty > span.qty-up {
   top: 0;
 }
 
-.detail-qty > a.qty-down {
+.detail-qty > span.qty-down {
   bottom: -4px;
 }
 
