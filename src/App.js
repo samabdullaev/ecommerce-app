@@ -28,40 +28,49 @@ import store from './store/store';
 function App() {
   return (
     <Provider store={store}>
-    <Navbar />
-    <main className="main">
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='/contact' element={<ContactPage />} />
-        <Route path='/account' element={<AccountPage />} />
-        <Route path='/wishlist' element={<WishlistPage />} />
-        <Route path='/compare' element={<ComparePage />} />
-        <Route path='/cart' element={<CartPage />} />
-        <Route path='/checkout' element={<CheckoutPage />} />
-        <Route path='/products/:id' element={<ProductDetailsPage />} />
-        <Route path='/filter/:category_id?' element={<FilterPage />} />
 
-        <Route path='/auth'>
-          <Route path='signin' element={<SigninPage />} />
-          <Route path='signup' element={<SignupPage />} />
-          <Route path='password-reset' element={<ResetPasswordPage />} />
-          <Route path='password-forgot' element={<ForgotPasswordPage />} />
-        </Route>
-        <Route path='/privacy' element={<PrivacyPage />} />
-        <Route path='/guides' element={<GuidesPage />} />
-        <Route path='/terms' element={<TermsPage />} />
-        
-        {/* <Route path='/filter'> */}
-            {/* <Route index element={<FilterPage />}  /> */}
-            {/* <Route path=':id' element={<ProductDetailsPage />} /> */}
-        {/* </Route> */}
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          height: "100vh",
+        }}
+      >
+        <Navbar />
+        <main className="main" style={{flex: 1}}>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about' element={<AboutPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='/account' element={<AccountPage />} />
+            <Route path='/wishlist' element={<WishlistPage />} />
+            <Route path='/compare' element={<ComparePage />} />
+            <Route path='/cart' element={<CartPage />} />
+            <Route path='/checkout' element={<CheckoutPage />} />
+            <Route path='/products/:id' element={<ProductDetailsPage />} />
+            <Route path='/filter/:category_id?' element={<FilterPage />} />
 
-        <Route path='*' element={<NotFoundPage />} />
-      </Routes>
-      </main>
-      <Footer />
-      <Loader />
+            <Route path='/auth'>
+              <Route path='signin' element={<SigninPage />} />
+              <Route path='signup' element={<SignupPage />} />
+              <Route path='password-reset' element={<ResetPasswordPage />} />
+              <Route path='password-forgot' element={<ForgotPasswordPage />} />
+            </Route>
+            <Route path='/privacy' element={<PrivacyPage />} />
+            <Route path='/guides' element={<GuidesPage />} />
+            <Route path='/terms' element={<TermsPage />} />
+            
+            {/* <Route path='/filter'> */}
+                {/* <Route index element={<FilterPage />}  /> */}
+                {/* <Route path=':id' element={<ProductDetailsPage />} /> */}
+            {/* </Route> */}
+
+            <Route path='*' element={<NotFoundPage />} />
+          </Routes>
+        </main>
+        <Footer />
+        <Loader />
+      </div>
     </Provider>
   );
 }

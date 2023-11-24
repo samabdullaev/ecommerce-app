@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import {removeProducts, changeQty} from '../../../store/features/cartSlice';
 import { PARSE_PRICE } from '../../../utils';
+import { toggleSelect } from '../../../store/features/cartSlice';
+import CheckboxIcon from '../../../assets/icons/CheckboxIcon';
 
 const CartProductCard = ({item}) => {
 
@@ -10,9 +12,12 @@ const CartProductCard = ({item}) => {
 
   return (
     <tr className="pt-30">
-                <td className="custome-checkbox pl-30">
-                  <input className="form-check-input" type="checkbox" name="checkbox" id={`checkbox-${item.id}`} defaultValue />
-                  <label className="form-check-label" htmlFor={`checkbox-${item.id}`} />
+                <td className="custome-checkbox pl-30 pr-20">
+                  <span 
+                    onClick={dispatch(toggleSelect(item.id))}
+                  >
+                    <CheckboxIcon isEmpty={!item.selected} />
+                  </span>
                 </td>
                 <td className="image product-thumbnail pt-40">
                     <img 

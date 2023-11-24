@@ -102,9 +102,21 @@ const cartSlice = createSlice({
                         } : item)
                 }
               }
+        },
+        toggleSelect: (state, action) => {
+            const {id, type} = action.payload;
+            if (id) {
+                state.products = !state.products.map(item => item.id === id ? ({...item, selected: !item.selected}) : item)
+            } else {
+                if (type === "check") {
+                    state.products = state.products.map(item => ({...item, selected: true}))
+                } else {
+                    state.products = state.products.map(item => ({...item, selected: false}))
+                }
+            }
         }
     }
 })
 
-export const {addCart, clearCart, removeProducts, changeQty} = cartSlice.actions
+export const {addCart, clearCart, removeProducts, changeQty, toggleSelect} = cartSlice.actions
 export default cartSlice.reducer
