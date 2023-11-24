@@ -61,7 +61,8 @@ const initialState = {
             selected: true,
             qty: 1
         }
-    ]
+    ],
+    deliveryCost: 5
 }
 
 const cartSlice = createSlice({
@@ -81,9 +82,29 @@ const cartSlice = createSlice({
         },
         removeProducts: (state, action) => {
             state.products = state.products.filter(item => item.id !== action.payload)
+        },
+        changeQty: (state, action) => {
+            if(action.payload.type === "inc") {
+                state.products = state.products.map((item) =>
+                    item.id === action.payload.id ? ({
+                        ...item,
+                        qty: item.qty + 1
+                    }) : item)
+              } else {
+                const product = state.products.find(item => item.id === action.payload.id);
+                if (product.qty === 1) {
+                    state.products = state.products.filter(item => item.id !== action.payload.id)
+                } else {
+                    state.products = state.products.map((item) => 
+                        item.id === action.payload.id ? {
+                            ...item,
+                            qty: item.qty - 1
+                        } : item)
+                }
+              }
         }
     }
 })
 
-export const {addCart, clearCart, removeProducts} = cartSlice.actions
+export const {addCart, clearCart, removeProducts, changeQty} = cartSlice.actions
 export default cartSlice.reducer

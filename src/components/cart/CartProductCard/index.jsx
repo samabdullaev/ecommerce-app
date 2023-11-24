@@ -1,7 +1,13 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import {removeProducts, changeQty} from '../../../store/features/cartSlice';
+import { PARSE_PRICE } from '../../../utils';
 
-const index = ({item, removeProduct, changeQty}) => {
+const CartProductCard = ({item}) => {
+
+  const dispatch = useDispatch();
+
   return (
     <tr className="pt-30">
                 <td className="custome-checkbox pl-30">
@@ -35,18 +41,18 @@ const index = ({item, removeProduct, changeQty}) => {
                 <td className="text-center detail-info" data-title="Stock">
                   <div className="detail-extralink mr-15">
                     <div className="detail-qty border radius">
-                      <span onClick={() => changeQty(item.id, "dec")} role='button' className="qty-down"><i className="fi-rs-angle-small-down" /></span>
+                      <span onClick={() => dispatch(changeQty({id: item.id, type: "dec"}))} role='button' className="qty-down"><i className="fi-rs-angle-small-down" /></span>
                       <p className="qty-val">{item.qty}</p>
-                      <span onClick={() => changeQty(item.id, "inc")} role='button' className="qty-up"><i className="fi-rs-angle-small-up" /></span>
+                      <span onClick={() => dispatch(changeQty({id: item.id, type: "inc"}))} role='button' className="qty-up"><i className="fi-rs-angle-small-up" /></span>
                     </div>
                   </div>
                 </td>
                 <td className="price" data-title="Price">
-                  <h4 className="text-brand">${item.price * item.qty} </h4>
+                  <h4 className="text-brand">${PARSE_PRICE(item.price * item.qty)} </h4>
                 </td>
-                <td className="action text-center" data-title="Remove"><span onClick={() => removeProduct(item.id)} className="text-body" role="button"><i className="fi-rs-trash" /></span></td>
+                <td className="action text-center" data-title="Remove"><span onClick={() => dispatch(removeProducts(item.id))} className="text-body" role="button"><i className="fi-rs-trash" /></span></td>
               </tr>
   )
 }
 
-export default index
+export default CartProductCard

@@ -7,3 +7,7 @@ export const CALCULATE_SUB_TOTAL = (products) => {
     }
     return total;
 };
+
+export const PARSE_PRICE = (price) => {
+    return price.toFixed(2);
+}

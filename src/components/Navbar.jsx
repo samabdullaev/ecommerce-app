@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import categoryData from '../data/category.data'
 import { useSelector } from 'react-redux'
 import CartProductCardSm from './cart/CartProductCardSm'
-import { CALCULATE_SUB_TOTAL } from '../utils'
+import { CALCULATE_SUB_TOTAL, PARSE_PRICE } from '../utils'
 
 const Navbar = () => {
   const cartProducts = useSelector(state => state.cart.products);
@@ -61,7 +61,7 @@ const Navbar = () => {
                       </ul>
                       <div className="shopping-cart-footer">
                         <div className="shopping-cart-total">
-                          <h4>Total <span>${totalPrice.toFixed(2)}</span></h4>
+                          <h4>Total <span>${PARSE_PRICE(totalPrice)}</span></h4>
                         </div>
                         <div className="shopping-cart-button">
                           <Link to="/cart" className="outline">View cart</Link>
@@ -210,7 +210,7 @@ const Navbar = () => {
                     </ul>
                     <div className="shopping-cart-footer">
                       <div className="shopping-cart-total">
-                      <h4>Total <span>${totalPrice.toFixed(2)}</span></h4>
+                      <h4>Total <span>${PARSE_PRICE(totalPrice)}</span></h4>
                       </div>
                       <div className="shopping-cart-button">
                         <Link to="/cart">View cart</Link>

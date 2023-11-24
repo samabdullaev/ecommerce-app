@@ -1,8 +1,14 @@
 import React, { useState } from 'react'
 import CartCoupon from '../CartCoupon'
+import { useSelector } from 'react-redux'
+import { CALCULATE_SUB_TOTAL } from '../../../utils'
 
-const CartTotalInfo = ({total, deliveryCost}) => {
-    const [discount, setDiscount] = useState(0)
+const CartTotalInfo = () => {
+  
+  const total = useSelector(state => CALCULATE_SUB_TOTAL(state.cart.products))
+  const deliveryCost = useSelector(state => state.cart.deliveryCost)
+  const [discount, setDiscount] = useState(0)
+  
   return (
     <div className="border p-md-4 cart-totals ml-30">
     <div className="table-responsive">
