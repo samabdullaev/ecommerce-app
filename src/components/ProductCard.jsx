@@ -1,8 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import ProductTag from './ProductTag'
+import { useDispatch, useSelector } from 'react-redux'
+import {addCart, removeProducts} from '../store/features/cartSlice'
 
 const ProductCard = ({item, index, openQuickView, type="grid"}) => {
+  const isInCart = useSelector(state => state.cart.products.find(p => p.id == item.id));
+  const dispatch = useDispatch();
+  const toggleCartProduct = (item) => {
+    if (isInCart) {
+      dispatch(removeProducts(item.id))
+    } else {
+      dispatch(addCart(item))
+    }
+  }
+
   return type==="grid" ? (
                 <div 
                     className="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" 
@@ -59,7 +71,14 @@ const ProductCard = ({item, index, openQuickView, type="grid"}) => {
                         <span className="old-price">${(item.price+10).toFixed(2)}</span>
                       </div>
                       <div className="add-cart">
-                        <a className="add" href="shop-cart.html"><i className="fi-rs-shopping-cart mr-5" />Add </a>
+                        <span
+                          onClick={() => toggleCartProduct(item)} 
+                          type="button" 
+                          className={isInCart ? "add remove" : "add"}
+                        >
+                          <i className="fi-rs-shopping-cart mr-5" />
+                            {isInCart ? "Remove" : "Add"} 
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -129,7 +148,15 @@ const ProductCard = ({item, index, openQuickView, type="grid"}) => {
       <span className="old-price">${(item.price + 10).toFixed(2)}</span>
     </div>
     <div className="mt-30">
-      <a aria-label="Buy now" className="btn" href="shop-cart.html"><i className="fi-rs-shopping-cart mr-5" />Add to Cart</a>
+      <span
+        onClick={() => toggleCartProduct(item)} 
+        role='button' 
+        aria-label="Buy now" 
+        className={isInCart ? "btn-danger" : "btn"}
+      >
+        <i className="fi-rs-shopping-cart mr-5" />
+          {isInCart ? "Remove from Cart" : "Add to Cart"}
+      </span>
       <a href="#" className="add-wishlish ml-30 text-body font-sm font-heading font-weight-bold"><i className="fi-rs-shuffle mr-5" />Add Compare</a>
     </div>
   </div>
