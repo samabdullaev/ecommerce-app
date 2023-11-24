@@ -22,10 +22,12 @@ import CheckoutPage from './pages/CheckoutPage';
 
 import TermsPage from './pages/info/TermsPage';
 import Loader from './components/Loader';
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
     <Navbar />
     <main className="main">
       <Routes>
@@ -60,7 +62,7 @@ function App() {
       </main>
       <Footer />
       <Loader />
-    </>
+    </Provider>
   );
 }
 
