@@ -7426,6 +7426,7 @@ h6.post-title {
   font-weight: 500;
   line-height: 1;
   margin: 0 0 9px;
+  width: 150px;
 }
 
 .cart-dropdown-wrap ul li .shopping-cart-title h4 a {

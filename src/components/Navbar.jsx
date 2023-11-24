@@ -2,10 +2,17 @@ import React, { useState } from 'react'
 import navbarData from '../data/navbar.data'
 import { Link } from 'react-router-dom'
 import categoryData from '../data/category.data'
+import { useSelector } from 'react-redux'
+import CartProductCardSm from './cart/CartProductCardSm'
+import { CALCULATE_SUB_TOTAL } from '../utils'
 
 const Navbar = () => {
+  const cartProducts = useSelector(state => state.cart.products);
   const [categoryToggle, setCategoryToggle] = useState(false);
   const [sidebarToggle, setSidebarToggle] = useState(false);
+
+  const totalPrice = useSelector(state => CALCULATE_SUB_TOTAL(state.cart.products))
+
   return (
     <>
     <header className="header-area header-style-1 header-style-5 header-height-2">
@@ -41,46 +48,27 @@ const Navbar = () => {
                   <div className="header-action-icon-2">
                     <Link to="/cart" className="mini-cart-icon">
                       <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
-                      <span className="pro-count blue">2</span>
+                      {cartProducts.length ? <span className="pro-count blue">{cartProducts.length}</span> : null}
                     </Link>
                     <Link to="/cart"><span className="lable">Cart</span></Link>
-                    <div className="cart-dropdown-wrap cart-dropdown-hm2">
+                    {cartProducts.length ? <div className="cart-dropdown-wrap cart-dropdown-hm2">
                       <ul>
-                        <li>
-                          <div className="shopping-cart-img">
-                            <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></a>
-                          </div>
-                          <div className="shopping-cart-title">
-                            <h4><a href="shop-product-right.html">Daisy Casual Bag</a></h4>
-                            <h4><span>1 × </span>$800.00</h4>
-                          </div>
-                          <div className="shopping-cart-delete">
-                            <a href="#"><i className="fi-rs-cross-small" /></a>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="shopping-cart-img">
-                            <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-2.jpg" /></a>
-                          </div>
-                          <div className="shopping-cart-title">
-                            <h4><a href="shop-product-right.html">Corduroy Shirts</a></h4>
-                            <h4><span>1 × </span>$3200.00</h4>
-                          </div>
-                          <div className="shopping-cart-delete">
-                            <a href="#"><i className="fi-rs-cross-small" /></a>
-                          </div>
-                        </li>
+                        {
+                          cartProducts.map((item, index) => (
+                            <CartProductCardSm key={index} item={item} />
+                          ))
+                        }
                       </ul>
                       <div className="shopping-cart-footer">
                         <div className="shopping-cart-total">
-                          <h4>Total <span>$4000.00</span></h4>
+                          <h4>Total <span>${totalPrice.toFixed(2)}</span></h4>
                         </div>
                         <div className="shopping-cart-button">
                           <Link to="/cart" className="outline">View cart</Link>
                           <Link to="/checkout">Checkout</Link>
                         </div>
                       </div>
-                    </div>
+                    </div> : null}
                   </div>
                   <div className="header-action-icon-2">
                     <Link to="/account">
@@ -210,45 +198,26 @@ const Navbar = () => {
                 <div className="header-action-icon-2">
                   <a className="mini-cart-icon" href="#">
                     <img alt="Nest" src="assets/imgs/theme/icons/icon-cart.svg" />
-                    <span className="pro-count white">2</span>
+                    {cartProducts.length ? <span className="pro-count white">{cartProducts.length}</span> : null}
                   </a>
-                  <div className="cart-dropdown-wrap cart-dropdown-hm2">
+                  {cartProducts.length ? <div className="cart-dropdown-wrap cart-dropdown-hm2">
                     <ul>
-                      <li>
-                        <div className="shopping-cart-img">
-                          <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-3.jpg" /></a>
-                        </div>
-                        <div className="shopping-cart-title">
-                          <h4><a href="shop-product-right.html">Plain Striola Shirts</a></h4>
-                          <h3><span>1 × </span>$800.00</h3>
-                        </div>
-                        <div className="shopping-cart-delete">
-                          <a href="#"><i className="fi-rs-cross-small" /></a>
-                        </div>
-                      </li>
-                      <li>
-                        <div className="shopping-cart-img">
-                          <a href="shop-product-right.html"><img alt="Nest" src="assets/imgs/shop/thumbnail-4.jpg" /></a>
-                        </div>
-                        <div className="shopping-cart-title">
-                          <h4><a href="shop-product-right.html">Macbook Pro 2022</a></h4>
-                          <h3><span>1 × </span>$3500.00</h3>
-                        </div>
-                        <div className="shopping-cart-delete">
-                          <a href="#"><i className="fi-rs-cross-small" /></a>
-                        </div>
-                      </li>
+                      {
+                        cartProducts.map((item, index) => (
+                          <CartProductCardSm key={index} item={item} />
+                        ))
+                      }
                     </ul>
                     <div className="shopping-cart-footer">
                       <div className="shopping-cart-total">
-                        <h4>Total <span>$383.00</span></h4>
+                      <h4>Total <span>${totalPrice.toFixed(2)}</span></h4>
                       </div>
                       <div className="shopping-cart-button">
                         <Link to="/cart">View cart</Link>
                         <Link to="/checkout">Checkout</Link>
                       </div>
                     </div>
-                  </div>
+                  </div> : null}
                 </div>
               </div>
             </div>
