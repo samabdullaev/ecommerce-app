@@ -1,4 +1,5 @@
-#Ecommerce App
+# Ecommerce App
+
 This is my side project.
 
 # Getting Started with Create React App
